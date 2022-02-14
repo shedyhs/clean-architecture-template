@@ -10,5 +10,3 @@ addAlias(
   '@',
   process.env.NODE_ENV === 'production' ? aliases.prod : aliases.dev,
 );
-
-console.log('Hello 🌎!');
