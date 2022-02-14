@@ -1,0 +1,29 @@
+{
+  "name": "only-configuration",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/shedyhs/only-configuration.git",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --ignore-watch node_modules --transpile-only src/index.ts"
+  },
+  "devDependencies": {
+    "@types/module-alias": "^2.0.1",
+    "@types/node": "^17.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.3"
+  },
+  "dependencies": {
+    "module-alias": "^2.2.2"
+  }
+}
