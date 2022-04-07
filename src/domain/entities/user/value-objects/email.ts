@@ -1,5 +1,5 @@
 import validator from 'validator';
-import { DomainError } from '../../../../shared/domain/domain-error';
+import { DomainError } from '@/shared/domain/domain-error';
 import { ValueObject } from '../../value-object';
 
 export class Email extends ValueObject<string> {

@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import { DomainError } from '../../../../shared/domain/domain-error';
+import { DomainError } from '@/shared/domain/domain-error';
 import { ValueObject } from '../../value-object';
 
 export class Password extends ValueObject<string> {
@@ -21,6 +21,7 @@ export class Password extends ValueObject<string> {
       );
     }
   }
+  
   private hashPassword(password: string): string {
     return bcrypt.hashSync(password, this.salts);
   }

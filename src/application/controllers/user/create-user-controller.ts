@@ -1,7 +1,8 @@
-import { HttpRequest, HttpResponse } from '../../../shared/interfaces/http';
-import { ICreateUser } from '../../usecases/user/interfaces/create-user-interface';
-import { RequiredFieldValidator } from '../../validations/required-field-validator';
-import { IValidator } from '../../validations/validator-interface';
+import { ICreateUser } from '@/application/usecases/user/interfaces/create-user-interface';
+import { RequiredFieldValidator } from '@/application/validations/required-field-validator';
+import { IValidator } from '@/application/validations/validator-interface';
+import { HttpRequest, HttpResponse } from '@/shared/interfaces/http';
+
 import { BaseController } from '../base-controller';
 
 export class CreateUserController extends BaseController {

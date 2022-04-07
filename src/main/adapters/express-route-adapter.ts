@@ -1,5 +1,5 @@
 import { RequestHandler } from 'express';
-import { BaseController } from '../../application/controllers/base-controller';
+import { BaseController } from '@/application/controllers/base-controller';
 
 type Adapter = (controller: BaseController) => RequestHandler;
 
