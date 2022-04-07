@@ -25,6 +25,7 @@ export class User extends Entity {
   get email(): string {
     return this._email.value;
   }
+
   set email(email: string) {
     this._email = new Email(email);
   }
@@ -32,6 +33,7 @@ export class User extends Entity {
   get name(): string {
     return this._name.value;
   }
+
   set name(name: string) {
     this._name = new Name(name);
   }
@@ -39,6 +41,7 @@ export class User extends Entity {
   get password(): string {
     return this._password.value;
   }
+
   set password(password: string) {
     this._password = new Password(password);
   }

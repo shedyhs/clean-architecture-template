@@ -2,6 +2,7 @@ import { ICreateUser } from '@/application/usecases/user/interfaces/create-user-
 import { RequiredFieldValidator } from '@/application/validations/required-field-validator';
 import { IValidator } from '@/application/validations/validator-interface';
 import { HttpRequest, HttpResponse } from '@/shared/interfaces/http';
+
 import { BaseController } from '../base-controller';
 
 export class CreateUserController extends BaseController {

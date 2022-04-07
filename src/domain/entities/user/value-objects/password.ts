@@ -21,7 +21,7 @@ export class Password extends ValueObject<string> {
       );
     }
   }
-
+  
   private hashPassword(password: string): string {
     return bcrypt.hashSync(password, this.salts);
   }

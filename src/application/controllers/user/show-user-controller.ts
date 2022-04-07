@@ -1,3 +1,4 @@
+
 import { IShowUser } from '@/application/usecases/user/interfaces/show-user-interface';
 import { RequiredFieldValidator } from '@/application/validations/required-field-validator';
 import { IValidator } from '@/application/validations/validator-interface';
@@ -17,5 +18,6 @@ export class ShowUserController extends BaseController {
 
   override buildValidators(request: HttpRequest): IValidator[] {
     return [new RequiredFieldValidator(request.params.id, 'userId')];
+
   }
 }
