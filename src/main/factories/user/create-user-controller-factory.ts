@@ -3,10 +3,10 @@ import { CreateUserController } from '@/application/controllers/user/create-user
 import { CreateUserUseCase } from '@/application/usecases/user/create-user-usecase';
 import { ICreateUser } from '@/application/usecases/user/interfaces/create-user-interface';
 import { IUsersRepository } from '@/domain/contracts/user-repository-interface';
-import { MemoryUsersRepository } from '@/infra/users-repository';
+import { MemoryUsersRepository } from '@/infra/memory-users-repository';
 
 export const makeCreateUserController = (): BaseController => {
-  const usersRepository: IUsersRepository = new MemoryUsersRepository();
+  const usersRepository: IUsersRepository = MemoryUsersRepository.getInstance();
   const createUserUseCase: ICreateUser = new CreateUserUseCase(usersRepository);
   return new CreateUserController(createUserUseCase);
 };

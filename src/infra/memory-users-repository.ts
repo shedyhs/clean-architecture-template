@@ -3,9 +3,20 @@ import { User } from '@/domain/entities/user/user';
 
 export class MemoryUsersRepository implements IUsersRepository {
   users: User[] = [];
+  // eslint-disable-next-line no-use-before-define
+  private static instance: MemoryUsersRepository;
+
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  private constructor() {}
+
+  public static getInstance(): MemoryUsersRepository {
+    if (!MemoryUsersRepository.instance) {
+      MemoryUsersRepository.instance = new MemoryUsersRepository();
+    }
+    return MemoryUsersRepository.instance;
+  }
 
   async create(user: User): Promise<void> {
-    console.log('password: ', user.password);
     this.users.push(user);
   }
 

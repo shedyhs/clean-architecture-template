@@ -10,7 +10,6 @@ export class CreateUserController extends BaseController {
   }
 
   async perform(request: HttpRequest): Promise<HttpResponse> {
-    console.log(request.body);
     const response = await this.createUserUseCase.execute(request.body);
     return { data: response, statusCode: 201 };
   }

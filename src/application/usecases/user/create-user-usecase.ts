@@ -18,7 +18,7 @@ export class CreateUserUseCase implements ICreateUser {
 
     const user = new User(input);
     await this.usersRepository.create(user);
-
+    console.log('User created');
     return UserMapper.toOutput(user);
   }
 }
